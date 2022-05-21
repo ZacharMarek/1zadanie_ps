@@ -80,7 +80,7 @@ def length(hl):
         return(s_cislo,s_txt,hlavicka,obsah)
     else:
         hlavicka = (f'Lines:1\n')
-        #obsah =len(nacit)
+        obsah =len(nacit)
         return(s_cislo,s_txt,hlavicka,obsah)
 
 
@@ -103,23 +103,16 @@ while True:
             pole_hl={}
             odp_hlav=""
             odp_hlav=""
-            print('1while')
             method=f.readline().strip()
             if not method:
                 break
-            print('metoda nacit')
             d=f.readline()
             while d != "\n":
                 prve,druhe=dopln(d)
                 pole_hl[prve]=druhe
                 d=f.readline()
-                print('2while')
-            #s_cislo,s_txt=metoda(pole_hl)
-            #if s_cislo==100:
-            print('metoda sedi')
 
             if method=="LS":
-                print('ls')
                 s_cislo,s_txt,odp_hlav,odp_obsah = ls(pole_hl)
             elif method=="READ":
                 s_cislo,s_txt,odp_hlav,odp_obsah = read(pole_hl)
